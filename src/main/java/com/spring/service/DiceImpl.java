@@ -42,11 +42,13 @@ public class DiceImpl implements DiceFunctions{
 		
 		Map<Integer,PlacePojo> pojoList=null;
 		
+		
+		
 		if(player == "1") {
 			Integer lastIndexofP1=index;
 		}
-		if(player == "1") {
-			Integer lastIndexofP1=index;
+		if(player == "2") {
+			Integer lastIndexofP2=index;
 		}
 		
 		Integer lastIndexofP1=index;
@@ -129,7 +131,11 @@ public class DiceImpl implements DiceFunctions{
 		   pojoList.put(10,p10);
 		   
 		   
-		   
+
+			if(index > 10) {
+				
+				index = index-10;
+			}
 		   
 		   PlacePojo tab=null;
 		   for ( Map.Entry<Integer, PlacePojo> entry : pojoList.entrySet()) {
@@ -143,10 +149,6 @@ public class DiceImpl implements DiceFunctions{
 			   
 			}
 
-			if(index > 10) {
-				
-				index = index-10;
-			}
 			
 			for(int i=1;i<pojoList.size();i++) {
 				
